@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<title>svg-link sample | Clipping!</title>
+<meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-align: center;
+}
+body{
+	background: #fdfaf2;
+}
+section{
+	margin-bottom: 10px;
+}
+h1{
+	margin: 10px;
+	font-family: 'Raleway', sans-serif;
+	color: #333;
+}
+.omake{
+	margin-top: 100px;
+}
+a{
+	position: relative;
+}
+polygon{
+	fill: none;
+	stroke: #000;
+}
+a .hex2,
+a .logo2{
+	transition: all .25s ease;
+}
+a:hover .hex2,
+a:hover .logo2{
+	opacity: 0;
+}
+</style>
+</head>
+<body>
+	<h1>svg-link sample</h1>
+	<section class="patern1">
+		<h1>patern1</h1>
+		<svg width="177" height="180" viewBox="0 0 177 180" class="photo-hex">
+			<defs>
+				<polygon points="0,25 43,0 86,25 86,75 43,100 0,75 " id="hex-polygon1"/>
+			</defs>
+			<g transform="translate(0,0)">
+				<a xlink:href="http://instagram.com/p/YXD1Untw4A/" target="_blank">
+					<g class="hex1">
+						<clipPath id="hex-clip1-1">
+							<use xlink:href="#hex-polygon1" x="0" y="0"/>
+						</clipPath>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-red.jpg" clip-path="url(#hex-clip1-1)" />
+					</g>
+				</a>
+			</g>
+			<g transform="translate(90,0)">
+				<a xlink:href="http://instagram.com/p/dtRqistw2O/" target="_blank">
+					<g class="hex1">
+						<clipPath id="hex-clip1-2">
+							<use xlink:href="#hex-polygon1" x="0" y="0"/>
+						</clipPath>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-blue.jpg" clip-path="url(#hex-clip1-2)" />
+					</g>
+				</a>
+			</g>
+			<g transform="translate(45,79)">
+				<a xlink:href="http://instagram.com/p/akHmc4twwO/" target="_blank">
+					<g class="hex1">
+						<clipPath id="hex-clip1-3">
+							<use xlink:href="#hex-polygon" x="0" y="0"/>
+						</clipPath>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-green.jpg" clip-path="url(#hex-clip1-3)" />
+					</g>
+				</a>
+			</g>
+		</svg>
+	</section>
+
+	<section class="patern2">
+		<h1>patern2(stroke)</h1>
+		<svg width="178" height="181" viewBox="0 0 178 181" class="photo-hex">
+			<defs>
+				<polygon points="0,25 43,0 86,25 86,75 43,100 0,75 " id="hex-polygon2"/>
+			</defs>
+			<g transform="translate(0,0)">
+				<a xlink:href="http://instagram.com/p/YXD1Untw4A/" target="_blank">
+					<g class="hex1">
+						<clipPath id="hex-clip2-1">
+							<use xlink:href="#hex-polygon2" x="1" y="1"/>
+						</clipPath>
+						<use xlink:href="#hex-polygon2" x="1" y="1"/>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-red.jpg" clip-path="url(#hex-clip2-1)" />
+					</g>
+				</a>
+			</g>
+			<g transform="translate(90,0)">
+				<a xlink:href="http://instagram.com/p/dtRqistw2O/" target="_blank">
+					<g class="hex1">
+						<clipPath id="hex-clip2-2">
+							<use xlink:href="#hex-polygon2" x="1" y="1"/>
+						</clipPath>
+						<use xlink:href="#hex-polygon2" x="1" y="1"/>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-blue.jpg" clip-path="url(#hex-clip2-2)" />
+					</g>
+				</a>
+			</g>
+			<g transform="translate(45,79)">
+				<a xlink:href="http://instagram.com/p/akHmc4twwO/" target="_blank">
+					<g class="hex1">
+						<clipPath id="hex-clip2-3">
+							<use xlink:href="#hex-polygon2" x="1" y="1"/>
+						</clipPath>
+						<use xlink:href="#hex-polygon2" x="1" y="1"/>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-green.jpg" clip-path="url(#hex-clip2-3)" />
+					</g>
+				</a>
+			</g>
+		</svg>
+	</section>
+
+	<section class="patern3">
+		<h1>patern3(rollover)</h1>
+		<svg width="177" height="180" viewBox="0 0 177 180" class="photo-hex">
+			<defs>
+				<polygon points="0,25 43,0 86,25 86,75 43,100 0,75 " id="hex-polygon3"/>
+			</defs>
+			<g transform="translate(0,0)">
+				<a xlink:href="http://instagram.com/p/YXD1Untw4A/" target="_blank">
+					<g class="hex1">
+						<clipPath id="hex-clip3-1">
+							<use xlink:href="#hex-polygon3" x="0" y="0"/>
+						</clipPath>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-red.jpg" clip-path="url(#hex-clip3-1)" />
+					</g>
+					<g class="hex2">
+						<clipPath id="hex-clip3-1">
+							<use xlink:href="#hex-polygon3" x="0" y="0"/>
+						</clipPath>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-red.gif" clip-path="url(#hex-clip3-1)" />
+					</g>
+				</a>
+			</g>
+			<g transform="translate(90,0)">
+				<a xlink:href="http://instagram.com/p/dtRqistw2O/" target="_blank">
+					<g class="hex1">
+						<clipPath id="hex-clip3-2">
+							<use xlink:href="#hex-polygon3" x="0" y="0"/>
+						</clipPath>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-blue.jpg" clip-path="url(#hex-clip3-2)" />
+					</g>
+					<g class="hex2">
+						<clipPath id="hex-clip3-2">
+							<use xlink:href="#hex-polygon3" x="0" y="0"/>
+						</clipPath>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-blue.gif" clip-path="url(#hex-clip3-2)" />
+					</g>
+				</a>
+			</g>
+			<g transform="translate(45,79)">
+				<a xlink:href="http://instagram.com/p/akHmc4twwO/" target="_blank">
+					<g class="hex1">
+						<clipPath id="hex-clip3-3">
+							<use xlink:href="#hex-polygon3" x="0" y="0"/>
+						</clipPath>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-green.jpg" clip-path="url(#hex-clip3-3)" />
+					</g>
+					<g class="hex2">
+						<clipPath id="hex-clip3-3">
+							<use xlink:href="#hex-polygon3" x="0" y="0"/>
+						</clipPath>
+						<image x="0" y="0" width="88" height="104" xlink:href="img/p1-green.gif" clip-path="url(#hex-clip3-3)" />
+					</g>
+				</a>
+			</g>
+		</svg>
+	</section>
+
+	<section class="omake">
+		<h1>おまけ</h1>
+		<svg width="140" height="128" viewBox="0 0 140 128" class="logos">
+		<defs>
+			<path d="M75.1,16.5H42.7v-2.7c0-7.5-6.1-13.8-14-13.8S15,6.1,15,13.8v2.9H0V128h100V41.4L75.1,16.5z M23.5,13.8
+	c0-2.9,2.3-5.2,5.3-5.2s5.3,2.3,5.3,5.2v2.9H23.5V13.8z M91.5,119.4H8.7V25.1H15v15.1C15,47.7,21.1,54,29,54s14-6.1,14-13.8v-5
+	c0-2.3-1.9-4.2-4.2-4.2s-4.2,1.9-4.2,4.2v5c0,2.9-2.3,5.2-5.3,5.2s-5.3-2.3-5.3-5.2V25.1H71v18h19l1.7,1.7v74.7H91.5z M25.2,84.7
+	h51.6c0,0-1.9,17.2-25.8,17.2C29.4,101.9,25.2,84.7,25.2,84.7z M68.7,68.8c0,3.1-2.5,5.6-5.7,5.6c-3.2,0-5.7-2.5-5.7-5.6
+	c0-3.1,2.5-5.6,5.7-5.6C66.2,63.4,68.7,65.9,68.7,68.8z M44,68.8c0,3.1-2.5,5.6-5.7,5.6c-3.2,0-5.7-2.5-5.7-5.6
+	c0-3.1,2.5-5.6,5.7-5.6C41.6,63.4,44,65.9,44,68.8z" id="logo-path" />
+		</defs>
+		<g transform="translate(128,15) rotate(90)">
+			<a xlink:href="http://naoi109.github.io/" target="_blank">
+				<g class="logo1">
+					<clipPath id="logo-clip1">
+						<use xlink:href="#logo-path" x="0" y="0"/>
+					</clipPath>
+					<image x="0" y="0" width="100" height="128" xlink:href="img/p2-after.gif" clip-path="url(#logo-clip1)" />
+				</g>
+				<g class="logo2">
+					<clipPath id="logo-clip1">
+						<use xlink:href="#logo-path" x="0" y="0"/>
+					</clipPath>
+					<image x="0" y="0" width="100" height="128" xlink:href="img/p2-before.gif" clip-path="url(#logo-clip1)" />
+				</g>
+			</a>
+		</g>
+		</svg>
+	</section>
+</body>
+</html>
